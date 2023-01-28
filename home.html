@@ -1,0 +1,93 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Startpage</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <img src="assets/ulbi.png"> -->
+    <div id="container">
+        <div id="blocked">
+            <div id="logo">変わっ データ</div>
+            <div id="dial">
+                <table>
+                    <tr>
+                        <td>ALTR</td>
+                        <td arr>»</td>
+                        <td lnk><a target="_blank" href="https://mail.proton.me/u/0/inbox">Proton</a></td>
+                        <td lnk><a target="_blank" href="">/</a></td>
+                        <td lnk><a target="_blank" href="">/</a></td>
+                        <td lnk><a target="_blank" href="">/</a></td>
+
+                    </tr>
+                    <tr>
+                        <td>LEARN</td>
+                        <td arr>»</td>
+                        <td lnk><a target="_blank" href="https://app.memrise.com/dashboard/scenarios">MEMrise</a></td>
+                        <td lnk><a target="_blank" href="https://web.eggbun.net/language/japanese/en/courses">JPN</a></td>
+
+                        <td lnk><a target="_blank" href="/">-</a></td>
+                        <td lnk><a target="_blank" href="/">-</a></td>
+                    </tr>
+                    <tr>
+                        <td>News etc</td>
+                        <td arr>»</td>
+                        <td lnk><a target="_blank" href="http://twitch.com">Twitch</a></td>
+                        <td lnk><a target="_blank" href="https://www.youtube.com/">YT</a></td>
+
+                        <td lnk><a target="_blank" href="">-</a></td>
+                        <td lnk><a target="_blank" href="">-</a></td>
+                    </tr>
+                    <tr>
+                        <td>Social</td>
+                        <td arr>»</td>
+                        <td lnk><a target="_blank" href="https://c.im/explore">Mastodon</a></td>
+                        <td lnk><a target="_blank" href="">-</a></td>
+                        <td lnk><a target="_blank" href="">-</a></td>
+                        <td lnk><a target="_blank" href="">-</a></td>
+                    </tr>
+                    <tr>
+                        <td>others</td>
+                        <td arr>»</td>
+                        <td lnk><a target="_blank" href="http://www.bbc.co.uk">BBC</a></td>
+                        <td lnk><a target="_blank" href="">-</a></td>
+                        <td lnk><a target="_blank" href="https://www.reddit.com/r/starcitizen/">/R/SC</a></td>
+                        <td lnk><a target="_blank" href="https://audioz.download/">/AW/</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="search">
+                <form method="get" action="http://www.google.com/search">
+                    <input name="q" type="text" placeholder="探す - Google" />
+                </form>
+            </div>
+        </div>
+<script type="text/javascript" src="assets/jquery.min.js"></script>
+<script type="text/javascript">
+var cl = function() {
+	var ca = ["#0d2b45", "#203c56", "#544e68", "#8d697a", "#d08159", "#ffaa5e", "#ffd4a3"];
+	$("td[lnk]").each(function(){
+		var r = ca[~~(Math.random() * ca.length)];
+		$(this).css("background-color", r);
+	});
+};
+var rl = function(){
+	var l = $('#logo');
+	var cr = l.text().split("");
+	l.empty();
+	$.each(cr, function (i, e) {
+	    l.append('<span>' + e + '</span>');
+	});
+}
+$(function(){
+	var a = setInterval(cl,400);
+	var b = rl();
+});
+</script>
+</body>
+
+</html>
